@@ -1,0 +1,18 @@
+{
+  "name": "server-web2board",
+  "version": "1.0.0",
+  "description": "Server configuration and socket connection for IoT projects",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Giovanny Gongora",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "johnny-five": "^0.9.61",
+    "node-gyp": "^3.4.0",
+    "socket.io": "^1.4.8"
+  }
+}
