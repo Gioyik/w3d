@@ -4,14 +4,12 @@ var io = require('socket.io')(server);
 var five = require("johnny-five");
 var Raspi = require("raspi-io");
 var board = new five.Board({
-  io: new Raspi()
+  io: new Raspi(),
+  repl: false,
+  debug: false,
 });
 
 server.listen(80);
-
-/*app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});*/
 
 io.on('connection', function (socket) {
   console.log("CONNECTION");
