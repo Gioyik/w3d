@@ -1,72 +1,0 @@
-
-Raspbian GNU/Linux 8 raspberrypi ttyAMA0
-
-raspberrypi login: r pi
-Password: 
-Last login: Wed Jul 27 21:12:09 UTC 2016 on ttyAMA0
-Linux raspberrypi 4.4.11-v7+ #888 SMP Mon May 23 20:10:33 BST 2016 armv7l
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-pi@raspberrypi:~$ sudo apt-get install git[K[K[Kwiringpi
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 1%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 83%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-The following NEW packages will be installed:
-  wiringpi
-0 upgraded, 1 newly installed, 0 to remove and 34 not upgraded.
-Need to get 43.9 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-0% [Working]            0% [Waiting for headers]                        Get:1 http://archive.raspberrypi.org/debian/ jessie/main wiringpi armhf 2.32 [43.9 kB]
-                        7% [1 wiringpi 2,856 B/43.9 kB 7%]                                  100% [Working]              Fetched 43.9 kB in 1s (40.0 kB/s)
-Selecting previously unselected package wiringpi.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 34863 files and directories currently installed.)
-Preparing to unpack .../wiringpi_2.32_armhf.deb ...
-Unpacking wiringpi (2.32) ...
-Setting up wiringpi (2.32) ...
-Processing triggers for libc-bin (2.19-18+deb8u4) ...
-pi@raspberrypi:~$ sudo apt-get install wiringpi[K[K[K[K[K[K[K[Kgit
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 79%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-The following extra packages will be installed:
-  git-man liberror-perl rsync
-Suggested packages:
-  gettext-base git-daemon-run git-daemon-sysvinit git-doc git-el git-email
-  git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn
-The following NEW packages will be installed:
-  git git-man liberror-perl rsync
-0 upgraded, 4 newly installed, 0 to remove and 34 not upgraded.
-Need to get 4,388 kB of archives.
-After this operation, 21.0 MB of additional disk space will be used.
-Do you want to continue? [Y/n] y
-0% [Working]            0% [Connecting to mirrordirector.raspbian.org (5.153.225.207)]                                                              0% [Working]            Get:1 http://mirrordirector.raspbian.org/raspbian/ jessie/main liberror-perl all 0.17-1.1 [22.4 kB]
-            0% [1 liberror-perl 4,000 B/22.4 kB 18%] [Waiting for headers]                                                              0% [1 liberror-perl 14.0 kB/22.4 kB 62%]                                        1% [Waiting for headers]                        Get:2 http://mirrordirector.raspbian.org/raspbian/ jessie/main git-man all 1:2.1.4-2.1+deb8u2 [1,267 kB]
-                        1% [2 git-man 1,166 B/1,267 kB 0%] [Waiting for headers]                                                        2% [2 git-man 55.4 kB/1,267 kB 4%]4% [2 git-man 168 kB/1,267 kB 13%]8% [2 git-man 342 kB/1,267 kB 27%]                                  13% [2 git-man 531 kB/1,267 kB 42%]17% [2 git-man 731 kB/1,267 kB 58%]                                   24% [2 git-man 1,036 kB/1,267 kB 82%]                                     29% [Working]             Get:3 http://mirrordirector.raspbian.org/raspbian/ jessie/main git armhf 1:2.1.4-2.1+deb8u2 [2,725 kB]
-             29% [3 git 1,166 B/2,725 kB 0%]39% [3 git 435 kB/2,725 kB 16%]52% [3 git 999 kB/2,725 kB 37%]                               67% [3 git 1,629 kB/2,725 kB 60%]                                 79% [3 git 2,179 kB/2,725 kB 80%]                                   548 kB/s 1s79% [3 git 2,179 kB/2,725 kB 80%]                                   548 kB/s 1s79% [3 git 2,179 kB/2,725 kB 80%]                                   548 kB/s 1s92% [Working]                                                       548 kB/s 0s                                                                               Get:4 http://mirrordirector.raspbian.org/raspbian/ jessie/main rsync armhf 3.1.1-3 [373 kB]
-92% [4 rsync 1,168 B/373 kB 0%]                                     548 kB/s 0s100% [Working]                                                      548 kB/s 0s                                                                               Fetched 4,388 kB in 8s (546 kB/s)
-Selecting previously unselected package liberror-perl.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 34902 files and directories currently installed.)
-Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
-Unpacking liberror-perl (0.17-1.1) ...
-Selecting previously unselected package git-man.
-Preparing to unpack .../git-man_1%3a2.1.4-2.1+deb8u2_all.deb ...
-Unpacking git-man (1:2.1.4-2.1+deb8u2) ...
-Selecting previously unselected package git.
-Preparing to unpack .../git_1%3a2.1.4-2.1+deb8u2_armhf.deb ...
-Unpacking git (1:2.1.4-2.1+deb8u2) ...
-Selecting previously unselected package rsync.
-Preparing to unpack .../rsync_3.1.1-3_armhf.deb ...
-Unpacking rsync (3.1.1-3) ...
-Processing triggers for man-db (2.7.0.2-5) ...
-Processing triggers for systemd (215-17+deb8u4) ...
-Setting up liberror-perl (0.17-1.1) ...
-Setting up git-man (1:2.1.4-2.1+deb8u2) ...
-Setting up git (1:2.1.4-2.1+deb8u2) ...
-Setting up rsync (3.1.1-3) ...
-Processing triggers for systemd (215-17+deb8u4) ...
-pi@raspberrypi:~$ 
