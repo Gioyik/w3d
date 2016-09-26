@@ -23,7 +23,7 @@ gulp.task('default', function() {
       .pipe(webserver({
         livereload: true,
         host: address,
-        port: 8081
+        port: 80
       }));
 
     // Start node socket server on the RPi

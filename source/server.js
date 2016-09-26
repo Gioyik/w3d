@@ -1,5 +1,5 @@
 var WebSocketServer = require('ws').Server;
-var wss = new WebSocketServer({ port: 8080 });
+var wss = new WebSocketServer({ port: 81 });
 var five = require("johnny-five");
 var Raspi = require("raspi-io");
 var board = new five.Board({
