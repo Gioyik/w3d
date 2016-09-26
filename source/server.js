@@ -11,7 +11,7 @@ var board = new five.Board({
 // Client and RPi are connected
 // Let's go ahead
 wss.on('connection', function (socket) {
-  console.log('[Web2Board]: Connection from remote client');
+  console.log('[w3d]: Connection from remote client');
   // Sending confirmation to the client
   socket.send(JSON.stringify({event: 'RPI_READY'}));
   // Led blink function from Jhonny Five
@@ -31,7 +31,7 @@ wss.on('connection', function (socket) {
       });
       // Send notification of Led Blinking
       socket.send(JSON.stringify({event: 'LED_BLINKING'}));
-      console.log('[Web2Board]: Led Blinking');
+      console.log('[w3d]: Led Blinking');
     };
 
     if (b.event == 'ledOn') {
@@ -42,7 +42,7 @@ wss.on('connection', function (socket) {
       });
       // Send notification of Led On
       socket.send(JSON.stringify({event: 'LED_ON'}));
-      console.log('[Web2Board]: Led state On');
+      console.log('[w3d]: Led state On');
     };
 
     if (b.event == 'ledOff') {
@@ -53,7 +53,7 @@ wss.on('connection', function (socket) {
       });
       // Send notification of Led Off
       socket.send(JSON.stringify({event: 'LED_OFF'}));
-      console.log('[Web2Board]: Led state Off');
+      console.log('[w3d]: Led state Off');
     };
 
     if (b.event == 'ledToggle') {
@@ -64,7 +64,7 @@ wss.on('connection', function (socket) {
       });
       // Send notification of Led Toggle
       socket.send(JSON.stringify({event: 'LED_TOGGLE'}));
-      console.log('[Web2Board]: Led state Toggle');
+      console.log('[w3d]: Led state Toggle');
     };
   });
 });

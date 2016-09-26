@@ -1,14 +1,14 @@
-Web2Board
-=========
+w3d
+===
 
-Web2Board is an installer that makes you focus on develop awesome projects!
+w3d is an installer that makes you focus on develop awesome projects!
 You don't need to know much about Linux and how to configure drivers.Everything
 is plug & make micro SD card. You just edit a project remotely from your
 computer as normal web site and you are done!.
 
-# Set up a Web2Board environment
+# Set up a w3d environment
 
-There are two options to use Web2Board:
+There are two options to use w3d:
 
 * Using an ISO image already prepared for your target platform
 * Installing from the scratch through repository scripts
@@ -24,7 +24,7 @@ TBD
 ## How to Deploy
 
 We use Grunt to automate the process of installation and configuration.
-Everything is easy as writing the following from WEB2BOARD disk folder:
+Everything is easy as writing the following from w3d disk folder:
 
 ```
 $ npm install
@@ -55,13 +55,13 @@ don't have ports open properly, you will have problems to connect.
 We expose a wrapper for Johnny Five API implementation to let web developers
 start new projects out of the box.
 
-| API JohnntFive  | Status            | API Web2Board         | Funtion parameters     |
+| API JohnnyFive  | Status            | API w3d               | Funtion parameters     |
 |:---------------:|:-----------------:|:---------------------:|:----------------------:|
-| [Led] on()      | DONE              | Web2Board.ledOn()     | not necessary          |
-| [Led] off()     | DONE              | Web2Board.ledOff()    | not necessary          |
-| [Led] toggle()  | DONE              | Web2Board.ledToggle() | not necessary          |
-| [Led] blink()   | DONE              | Web2Board.ledblink()  | (gpioPinNumber, delay) |
-| [Led] stop()    | DONE              | Web2Board.ledstop()   | not necessary          |
+| [Led] on()      | DONE              | w3d.ledOn()           | not necessary          |
+| [Led] off()     | DONE              | w3d.ledOff()          | not necessary          |
+| [Led] toggle()  | DONE              | w3d.ledToggle()       | not necessary          |
+| [Led] blink()   | DONE              | w3d.ledblink()        | (gpioPinNumber, delay) |
+| [Led] stop()    | DONE              | w3d.ledstop()         | not necessary          |
 | [Led] pulse()   | NOT IMPLEMENTED   |                       |                        |
 | [Led] fadeOut() | NOT IMPLEMENTED   |                       |                        |
 | [Led] fadeIn()  | NOT IMPLEMENTED   |                       |                        |

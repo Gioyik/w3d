@@ -4,9 +4,9 @@ var conn_state;
 
 ws.onopen = function () {
   if (ws.readyState != WebSocket.OPEN) {
-    throw new Error('[Web2Board]: Not connected');
+    throw new Error('[w3d]: Not connected');
   } else {
-    console.log('[Web2Board]: Connection ready. WebSocket connection state: '+ws.readyState);
+    console.log('[w3d]: Connection ready. WebSocket connection state: '+ws.readyState);
   };
 
   // Making sure we talk to the RPi
@@ -26,84 +26,84 @@ ws.onclose = function () {
 
 // The Main class that has all the
 // connection with the PI and specification
-var Web2Board = {
-    // Web2Board.ledBlink(ledNumber, blinkTime)
+var w3d = {
+    // w3d.ledBlink(ledNumber, blinkTime)
     ledBlink: function(pin, delay) {
-      console.log('[Web2Board]: Led (PIN)): '+pin+' - Blink (DELAY): '+delay);
+      console.log('[w3d]: Led (PIN)): '+pin+' - Blink (DELAY): '+delay);
       if (conn_state == "RPI_READY") {
         ws.send(JSON.stringify({event: 'ledBlink', led: pin, blink: delay}));
         ws.onmessage = function(c) {
           var d = JSON.parse(c.data);
           if (d.event == 'LED_BLINKING') {
-            console.log('[Web2Board]: '+d.event);
+            console.log('[w3d]: '+d.event);
           };
         };
       } else {
-        console.log('[Web2Board]: Impossible to send instructions to RPi');
+        console.log('[w3d]: Impossible to send instructions to RPi');
       };
     },
 
-    // Web2Board.ledOn(ledNumber)
+    // w3d.ledOn(ledNumber)
     ledOn: function(pin) {
-      console.log('[Web2Board]: Led (PIN)): '+pin);
+      console.log('[w3d]: Led (PIN)): '+pin);
       if (conn_state == "RPI_READY") {
         ws.send(JSON.stringify({event: 'ledOn', led: pin}));
         ws.onmessage = function(c) {
           var d = JSON.parse(c.data);
           if (d.event == 'LED_ON') {
-            console.log('[Web2Board]: '+d.event);
+            console.log('[w3d]: '+d.event);
           };
         };
       } else {
-        console.log('[Web2Board]: Impossible to send instructions to RPi');
+        console.log('[w3d]: Impossible to send instructions to RPi');
       };
     },
 
-    // Web2Board.ledOff(ledNumber)
+    // w3d.ledOff(ledNumber)
     ledOff: function(pin) {
-      console.log('[Web2Board]: Led (PIN)): '+pin);
+      console.log('[w3d]: Led (PIN)): '+pin);
       if (conn_state == "RPI_READY") {
         ws.send(JSON.stringify({event: 'ledOff', led: pin}));
         ws.onmessage = function(c) {
           var d = JSON.parse(c.data);
           if (d.event == 'LED_OFF') {
-            console.log('[Web2Board]: '+d.event);
+            console.log('[w3d]: '+d.event);
           };
         };
       } else {
-        console.log('[Web2Board]: Impossible to send instructions to RPi');
+        console.log('[w3d]: Impossible to send instructions to RPi');
       };
     },
 
-    // Web2Board.ledToggle(ledNumber)
+    // w3d.ledToggle(ledNumber)
     ledToggle: function(pin) {
-      console.log('[Web2Board]: Led (PIN)): '+pin);
+      console.log('[w3d]: Led (PIN)): '+pin);
       if (conn_state == "RPI_READY") {
         ws.send(JSON.stringify({event: 'ledToggle', led: pin}));
         ws.onmessage = function(c) {
           var d = JSON.parse(c.data);
           if (d.event == 'LED_TOGGLE') {
-            console.log('[Web2Board]: '+d.event);
+            console.log('[w3d]: '+d.event);
           };
         };
       } else {
-        console.log('[Web2Board]: Impossible to send instructions to RPi');
+        console.log('[w3d]: Impossible to send instructions to RPi');
       };
     },
 
-    // Web2Board.ledStop(ledNumber)
+    // w3d.ledStop(ledNumber)
     ledStop: function(pin) {
-      console.log('[Web2Board]: Led (PIN)): '+pin);
+      console.log('[w3d]: Led (PIN)): '+pin);
       if (conn_state == "RPI_READY") {
         ws.send(JSON.stringify({event: 'ledStop', led: pin}));
         ws.onmessage = function(c) {
           var d = JSON.parse(c.data);
           if (d.event == 'LED_STOP') {
-            console.log('[Web2Board]: '+d.event);
+            console.log('[w3d]: '+d.event);
           };
         };
       } else {
-        console.log('[Web2Board]: Impossible to send instructions to RPi');
+        console.log('[w3d]: Impossible to send instructions to RPi');
       };
     },
 };

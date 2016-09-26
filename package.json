@@ -1,7 +1,7 @@
 {
-  "name": "web2board",
+  "name": "w3d",
   "version": "1.0.0",
-  "description": "Web2Board project",
+  "description": "w3d project",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",

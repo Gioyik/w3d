@@ -18,7 +18,7 @@ gulp.task('default', function() {
       .pipe(replace('127.0.0.1', address))
       .pipe(gulp.dest('public'));
 
-    // Serve Web2Board file for client
+    // Serve w3d file for client
     gulp.src('public')
       .pipe(webserver({
         livereload: true,
