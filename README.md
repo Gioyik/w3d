@@ -36,18 +36,45 @@ the API exposure.
 
 # Run your own project
 
-Start a project is really easier. The device will serve a JS file that you
-need to include on your website. The url for the file being served would be:
+Start a project is really easier, the device will serve a JS file that you
+need to include on your website.
+
+Example using **w3d** to directly control a Raspberry Pi. Connect the breadboard,
+led and Raspberry Pi following the image:
+
+![alt text](docs/raspberrypi.png)
+
+Then create a new ```index.html```:
 
 ```
-http://your-local-ip-on-RPI:8081/client.js
+<html>
+  <head>
+    <title>Blink example - w3d</title>
+    <script src="http://your-local-ip-on-RPI:80/client.js"></script>
+  </head>
+  <body>
+    <input id="clickMe" type="button" value="Do some blinking"/>
+    <script type="text/javascript">
+      document.getElementById("clickMe").addEventListener("click", function(){
+          w3d.ledBlink(13);
+      });
+    </script>
+  </body>
+</html>
 ```
 
-Take in consideration that you need to know the ip of the device that is running
+**Note:** Replace ```your-local-ip-on-RPI``` with the real IP on your Raspberry
+Pi. If you want to know how, check the next section to learn how.
+
+Turn on your Rasberry Pi, connect it to internet using Ethernet cable or a WiFi
+adapter.Take in consideration that you need to know the ip of the device that is running
 and serving the files for your project.
 
+Finally, open the ```index.html``` on you web browser and you will see the led
+blinking connected to the Rasberri Pi.
+
 Make sure your local connection has ports enabled and open. The communication
-between your computer and the device is by a socket connection, so, if you
+between your computer and the device is done by a socket connection, so, if you
 don't have ports open properly, you will have problems to connect.
 
 ## Get the IP assigned to your Raspberry Pi
